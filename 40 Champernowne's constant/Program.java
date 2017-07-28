@@ -24,6 +24,5 @@ public class Program {
             ((long) (chars.get(99999)) - 48)*
             ((long) (chars.get(999999)) - 48)
         );
-
     }
 }
