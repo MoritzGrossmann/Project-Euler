@@ -14,6 +14,6 @@ public class Program {
             }
         }
 
-        System.out.println("Produkt: " + sum.shortening());
+        System.out.println("Summe: " + sum.shortening());
     }
 }

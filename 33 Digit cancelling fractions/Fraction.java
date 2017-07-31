@@ -23,8 +23,8 @@ public class Fraction {
         }
     }
 
-    private boolean isZero() {
-        return this.numerator == 0 && this.denominator == 0;
+    public boolean isZero() {
+        return this.numerator == 0 || this.denominator == 0;
     }
 
     public boolean isTrivial() {
@@ -33,10 +33,6 @@ public class Fraction {
 
     public boolean equals(Fraction f) {
         return this.numerator * f.denominator == this.denominator * f.numerator;
-    }
-
-    private boolean sameDigits(Fraction f) {
-        return this.numerator == f.numerator && this.denominator == f.denominator;
     }
 
     public Fraction add(Fraction f) {
@@ -82,6 +78,7 @@ public class Fraction {
         return this;
     }
 
+    @Override
     public String toString() {
         return numerator+"/"+denominator;
     }
