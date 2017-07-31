@@ -1,9 +1,15 @@
-public class Program {
 
+public class Program {
 
     public static void main(String[] args) {
 
-        Number n = new Number(3);
-        System.out.println(n.pow(2));
+        GoldbachThreadpool tp = new GoldbachThreadpool(5);
+        tp.start();
+
+        try {
+            tp.join();
+        } catch (InterruptedException e) {
+            System.out.println(e.getMessage());
+        }
     }
 }
