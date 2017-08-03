@@ -36,9 +36,7 @@ public class GoldbachThreadpool {
     }
 
     public void found() throws InterruptedException {
-        sem.acquire();
         this.hasFound = true;
-        sem.release();
     }
 
     public long getNext() throws InterruptedException {
