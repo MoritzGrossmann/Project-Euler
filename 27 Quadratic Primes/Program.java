@@ -10,7 +10,7 @@ public class Program {
                 QuadraticPrime q = new QuadraticPrime(a, b);
                 if (q.getConsecutivePrimes() > max) {
                     max = q.getConsecutivePrimes();
-                    System.out.println(a + " " + b +" -> "+ q.getConsecutivePrimes() + " -> "+ q.getCoefficient());
+                    System.out.printf("Neuer Maxwert: a = %d\t-> b=   %d\tAufeinanderfolgende Primzahlen: %d\t Koeffizient a und b: %d\n", a, b, q.getConsecutivePrimes(), q.getCoefficient());
                 }
             }
         }
