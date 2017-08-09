@@ -30,14 +30,11 @@ let rec getPrimes (n : int) =
         let prime = getNextPrime n
         if prime + 3330
                 |>isPrime
-        then
-            if (prime + 6660)
+            && prime + 6660
                 |>isPrime
-            then
-                printfn "%d" prime
-                getPrimes ( n + 1)
-            else
-                getPrimes ( n + 1 )
+        then
+            printfn "%d\t%d\t%d\n" prime (prime + 3330) (prime + 6660)
+            getPrimes (n + 1)
         else
             getPrimes (n + 1)
 
