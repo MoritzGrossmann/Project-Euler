@@ -5,13 +5,9 @@ import java.util.concurrent.Semaphore;
 public class Threadpool {
 
     private ArrayList<Thread> threads = new ArrayList<>();
-
     private BigInteger number = new BigInteger("0");
-
     private int count = 0;
-
     private Semaphore readSemaphore = new Semaphore(1, true);
-
     private Semaphore writeSemaphore = new Semaphore(1,true);
 
     public Threadpool(int count) {

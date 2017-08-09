@@ -1,4 +1,4 @@
-package PRoblem46;
+package Problem46;
 
 import java.util.ArrayList;
 import java.util.concurrent.Semaphore;
