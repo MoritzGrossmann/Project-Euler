@@ -23,13 +23,23 @@ let rec getNextPrime p =
     else
         getNextPrime p + 1
 
-let rec getPrimes (n : int) (ls : List<int>) = 
-    if n > 9999 then
-        []
+let rec getPrimes (n : int) =
+    if n > 3400 then
+        "Program Terminated"
     else
-        ls :: getNextPrime n
+        let prime = getNextPrime n
+        if prime + 3330
+                |>isPrime
+        then
+            if (prime + 6660)
+                |>isPrime
+            then
+                printfn "%d" prime
+                getPrimes ( n + 1)
+            else
+                getPrimes ( n + 1 )
+        else
+            getPrimes (n + 1)
 
-
-let makeSeq = 
-    let seq = []
-    (getPrimes 1000 seq)
+let runProgram =
+    getPrimes 1000
